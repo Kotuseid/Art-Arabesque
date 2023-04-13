@@ -84,13 +84,13 @@ canvas.addEventListener('mousedown', (e) => {
         checkbox.checked = true;
 
         let label = document.createElement('label');
-        label.style = "padding:0;margin:0;"
+        label.style = "padding:5px;margin:0;"
         label.setAttribute('for', `center${centers.length}`);
-        label.innerText = `center${centers.length}`;
+        label.innerText = `Center ${centers.length}`;
 
         let el = document.createElement('div');
         el.className = "checkbox";
-        el.style = "font-size:0.7rem;display:flex;flex-direction:row;";
+        el.style = "display:flex;flex-direction:row;";
         el.appendChild(checkbox);
         el.appendChild(label);
 
