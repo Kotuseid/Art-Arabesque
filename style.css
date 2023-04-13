@@ -137,6 +137,9 @@ input[type=number]:focus {
     width: 100vw;
     height: 100vh;
     padding: 0;
+    top: 0;
+    transition: ease;
+    transition-duration: 1s;
 }
 
 h1 {
@@ -174,7 +177,7 @@ li {
 }
 
 #bottom {
-    position:absolute;
-    bottom:0;
-    right:20px;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
 }

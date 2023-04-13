@@ -10,6 +10,7 @@ let centerRotations = document.getElementById("centerRotations");
 let centerSelection = document.getElementById("centerSelection");
 let settings = document.getElementById("settings");
 let checkboxes = document.getElementsByClassName("checkbox");
+let instructions = document.getElementById("instructions");
 
 let lines = [];
 let centers = [];
@@ -122,6 +123,13 @@ document.addEventListener('keydown', (e) => {
         createEl.download = "art";
         createEl.click();
         createEl.remove();
+    }
+    if (e.key == 'i') {
+        if (instructions.style.top == "") {
+            instructions.style.top = "-100vh";
+        } else {
+            instructions.style.top = "";
+        }
     }
 });
 
