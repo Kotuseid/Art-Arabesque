@@ -12,7 +12,7 @@
     <canvas id="myCanvas" oncontextmenu="return false;"></canvas>
 
     <div id="settings">
-        <label for="lineColor">Line Color:</label><br>
+        <label for="lineColor">Line Colour:</label><br>
         <input type="color" name="lineColor" id="lineColor" value="#3a9288"><br>
         <label for="lineWidth">Line Width:</label><br>
         <input type="number" name="lineWidth" id="lineWidth" min="1" max="100" step="1" value="2"><br>
@@ -21,7 +21,46 @@
         <div id="centerSelection"></div>
     </div>
 
-    <div id="instructions"></div>
+    <div id="instructions">
+        <h1>Instructions:</h1>
+        <div id="left" class="sides">
+            <h3>Lines</h3>
+            <ul>
+                <li>Hold down the left key on your mouse and drag</li>
+                <li>Press Ctrl+z to delete the last line</li>
+            </ul>
+            <h3>Centers</h3>
+            <ul>
+                <li>Right click to create a Center</li>
+                <li>Drawing lines gets rotated and reflected around the active Centers</li>
+                <li>Decide which Centers should be active by moving the mouse to the right side of the screen and
+                    selecting the checkboxes</li>
+                <li>Customise how many rotations the active centers will make by changing the value in the "Amount of
+                    Rotations" box</li>
+                <li>Note: lines can have multiple Centers</li>
+                <li>Press Alt+z to delete the last Center</li>
+            </ul>
+        </div>
+
+        <div class="sides" id="right">
+            <h3>Styling</h3>
+            <ul>
+                <li>Move the mouse to the right side of the screen &lpar; A selection panel will appear &rpar;</li>
+                <li>Select the colour of the line</li>
+                <li>Select the thickness of the line &lpar; In pixels &rpar;</li>
+            </ul>
+            <h3>Saving</h3>
+            <ul>
+                <li>Press Ctrl+s to save to image as a png</li>
+            </ul>
+            <h3>CLearing</h3>
+            <ul>
+                <li>Press the spacebar to clear the screen</li>
+                <li>Note: this removes the lines AND Centers permanently</li>
+            </ul>
+            <p id="bottom">Press 'i' on your keyboard to open and close this panel</p>
+        </div>
+    </div>
 
     <script src="center.js"></script>
     <script src="line.js"></script>
