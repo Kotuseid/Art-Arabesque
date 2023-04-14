@@ -181,3 +181,34 @@ li {
     bottom: 0;
     right: 20px;
 }
+
+#deviceBlock {
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    transition: ease;
+    transition-duration: 1s;
+}
+
+#redText {
+    font-size: 50px;
+    color: red;
+    font-family: "Segoe UI Ultrabold", sans-serif;
+    max-width: 90vw;
+}
+
+@media only screen and (max-width: 800px) {
+    #deviceBlock {
+        top: 0;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    #deviceBlock {
+        top: 100%;
+    }
+}
