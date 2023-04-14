@@ -4,6 +4,7 @@
 let canvas = document.getElementById("myCanvas");
 let ctx = canvas.getContext('2d');
 
+let backgroundColor = document.getElementById("backgroundColor");
 let lineColor = document.getElementById("lineColor");
 let lineWidth = document.getElementById("lineWidth");
 let centerRotations = document.getElementById("centerRotations");
@@ -159,6 +160,9 @@ centerRotations.addEventListener('change', (e) => {
 function draw() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+
+    ctx.fillStyle = backgroundColor.value;
+    ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
 
     for (let i = 0; i < lines.length; i++) {
         lines[i].draw(ctx);
