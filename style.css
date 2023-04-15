@@ -11,6 +11,15 @@ body {
     overflow: hidden;
 }
 
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
 #myCanvas {
     background: black;
     display: block;
@@ -92,7 +101,8 @@ input[type=number]:focus {
     width: 120px;
     height: 100vh;
     position: absolute;
-    margin-left: 100vw;
+    left: 100vw;
+    top: 0;
     transition: ease;
     transition-duration: 1s;
 }
@@ -195,15 +205,21 @@ li {
 }
 
 #redText {
-    font-size: 50px;
+    font-size: 40px;
     color: red;
     font-family: "Segoe UI Ultrabold", sans-serif;
-    max-width: 90vw;
+    max-width: 95vw;
 }
 
 @media only screen and (max-width: 800px) {
     #deviceBlock {
         top: 0;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #redText {
+        font-size:30px;
     }
 }
 

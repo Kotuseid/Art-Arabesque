@@ -31,9 +31,10 @@ function createGenericLine() {
 canvas.addEventListener('mousemove', (e) => {
     if (e.which == 0) {
         if (e.clientX >= window.innerWidth - 2) {
-            settings.style.marginLeft = "calc(100vw - 130px)";
+            settings.style.left = "calc(100vw - 130px)";
+            console.log("SSSSSS")
         } else {
-            settings.style.marginLeft = "100vw";
+            settings.style.left = "100vw";
         }
     }
     if (e.which == 1) {

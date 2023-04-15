@@ -10,62 +10,65 @@
 </head>
 
 <body>
-    <canvas id="myCanvas" oncontextmenu="return false;"></canvas>
+    <div id="wrapper">
+        <canvas id="myCanvas" oncontextmenu="return false;"></canvas>
 
-    <div id="settings">
-        <label for="backgroundColor">Background Colour:</label><br>
-        <input type="color" name="backgroundColor" id="backgroundColor" value="#000000"><br>
-        <label for="lineColor">Line Colour:</label><br>
-        <input type="color" name="lineColor" id="lineColor" value="#3a9288"><br>
-        <label for="lineWidth">Line Width:</label><br>
-        <input type="number" name="lineWidth" id="lineWidth" min="1" max="100" step="1" value="2"><br>
-        <label for="centerRotations">Amount of Rotations:</label><br>
-        <input type="number" name="centerRotations" id="centerRotations" min="1" max="100" step="1" value="7"><br>
-        <div id="centerSelection"></div>
-    </div>
-
-    <div id="instructions">
-        <h1>Instructions:</h1>
-        <div id="left" class="sides">
-            <h3>Lines</h3>
-            <ul>
-                <li>Hold down the left key on your mouse and drag</li>
-                <li>Move the mouse to the right side of the screen &lpar;A selection panel will appear&rpar;</li>
-                <li>Select the colour of the line</li>
-                <li>Select the thickness of the line &lpar;In pixels&rpar;</li>
-            </ul>
-            <h3>Centers</h3>
-            <ul>
-                <li>Right click to create a Center</li>
-                <li>Drawing lines gets rotated and reflected around the active Centers</li>
-                <li>Move the mouse to the right side of the screen &lpar;A selection panel will appear&rpar;</li>
-                <li>Decide which Centers should be active by selecting the checkboxes</li>
-                <li>Decide how many rotations around the active Centers</li>
-                <li>Note: lines can have multiple Centers</li>
-            </ul>
+        <div id="settings">
+            <label for="backgroundColor">Background Colour:</label><br>
+            <input type="color" name="backgroundColor" id="backgroundColor" value="#000000"><br>
+            <label for="lineColor">Line Colour:</label><br>
+            <input type="color" name="lineColor" id="lineColor" value="#3a9288"><br>
+            <label for="lineWidth">Line Width:</label><br>
+            <input type="number" name="lineWidth" id="lineWidth" min="1" max="100" step="1" value="2"><br>
+            <label for="centerRotations">Amount of Rotations:</label><br>
+            <input type="number" name="centerRotations" id="centerRotations" min="1" max="100" step="1" value="7"><br>
+            <div id="centerSelection"></div>
         </div>
-        
-        <div class="sides" id="right">
-            <h3>Background</h3>
-            <ul>
-                <li>Move the mouse to the right side of the screen &lpar;A selection panel will appear&rpar;</li>
-                <li>Select the color of the background</li>
-            </ul>
-            <h3>Keyboard Commands</h3>
-            <ul>
-                <li>Press Ctrl+z to delete the last line</li>
-                <li>Press Alt+z to delete the last Center</li>
-                <li>Press Ctrl+s to save to image as a png</li>
-                <li>Press the spacebar to clear the screen</li>
-                <li>Note: this removes the lines AND Centers permanently</li>
-            </ul>
-            <p id="bottom">Press 'i' on your keyboard to open and close this panel</p>
-        </div>
-    </div>
 
-    <div id="deviceBlock">
-        <h1 id="redText">Please open this on a device which has a touchpad/mouse and a keyboard. This does not work on
-            phones or tablets.</h1>
+        <div id="instructions">
+            <h1>Instructions:</h1>
+            <div id="left" class="sides">
+                <h3>Lines</h3>
+                <ul>
+                    <li>Hold down the left key on your mouse and drag</li>
+                    <li>Move the mouse to the right side of the screen &lpar;A selection panel will appear&rpar;</li>
+                    <li>Select the colour of the line</li>
+                    <li>Select the thickness of the line &lpar;In pixels&rpar;</li>
+                </ul>
+                <h3>Centers</h3>
+                <ul>
+                    <li>Right click to create a Center</li>
+                    <li>Drawing lines gets rotated and reflected around the active Centers</li>
+                    <li>Move the mouse to the right side of the screen &lpar;A selection panel will appear&rpar;</li>
+                    <li>Decide which Centers should be active by selecting the checkboxes</li>
+                    <li>Decide how many rotations around the active Centers</li>
+                    <li>Note: lines can have multiple Centers</li>
+                </ul>
+            </div>
+
+            <div class="sides" id="right">
+                <h3>Background</h3>
+                <ul>
+                    <li>Move the mouse to the right side of the screen &lpar;A selection panel will appear&rpar;</li>
+                    <li>Select the color of the background</li>
+                </ul>
+                <h3>Keyboard Commands</h3>
+                <ul>
+                    <li>Press Ctrl+z to delete the last line</li>
+                    <li>Press Alt+z to delete the last Center</li>
+                    <li>Press Ctrl+s to save to image as a png</li>
+                    <li>Press the spacebar to clear the screen</li>
+                    <li>Note: this removes the lines AND Centers permanently</li>
+                </ul>
+                <p id="bottom">Press 'i' on your keyboard to open and close this panel</p>
+            </div>
+        </div>
+
+        <div id="deviceBlock">
+            <h1 id="redText">Please open this on a device which has a touchpad/mouse and a keyboard. This does not work
+                on
+                phones or tablets.</h1>
+        </div>
     </div>
 
     <script src="center.js"></script>
