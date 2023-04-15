@@ -19,6 +19,8 @@ let activeCenters = [];
 
 let latestLine = createGenericLine();
 
+let S = false;
+
 function createGenericLine() {
     let l = new Line();
     l.centers = [...activeCenters];
@@ -119,12 +121,8 @@ document.addEventListener('keydown', (e) => {
     }
     if (e.key == 's' && e.ctrlKey) {
         e.preventDefault();
-        let canvasUrl = canvas.toDataURL();
-        const createEl = document.createElement('a');
-        createEl.href = canvasUrl;
-        createEl.download = "art";
-        createEl.click();
-        createEl.remove();
+        S = true;
+
     }
     if (e.key == 'i') {
         if (instructions.style.top == "") {
@@ -168,11 +166,23 @@ function draw() {
     for (let i = 0; i < lines.length; i++) {
         lines[i].draw(ctx);
     }
-    for (let i = 0; i < centers.length; i++) {
-        centers[i].draw(ctx);
+    if (!S) {
+        for (let i = 0; i < centers.length; i++) {
+            centers[i].draw(ctx);
+        }
     }
     latestLine.draw(ctx);
 
+
+    if (S) {
+        let canvasUrl = canvas.toDataURL();
+        const createEl = document.createElement('a');
+        createEl.href = canvasUrl;
+        createEl.download = "art";
+        createEl.click();
+        createEl.remove();
+        S = false;
+    }
 
     window.requestAnimationFrame(draw);
 }
