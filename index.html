@@ -16,14 +16,24 @@
         <canvas id="myCanvas" oncontextmenu="return false;"></canvas>
 
         <div id="settings">
-            <label for="backgroundColor">Background Colour:</label><br>
-            <input type="color" name="backgroundColor" id="backgroundColor" value="#000000"><br>
-            <label for="lineColor">Line Colour:</label><br>
-            <input type="color" name="lineColor" id="lineColor" value="#3a9288"><br>
-            <label for="lineWidth">Line Width:</label><br>
-            <input type="number" name="lineWidth" id="lineWidth" min="1" max="100" step="1" value="2"><br>
-            <label for="centerRotations">Amount of Rotations:</label><br>
-            <input type="number" name="centerRotations" id="centerRotations" min="1" max="100" step="1" value="7"><br>
+            <div class="inputs">
+                <label for="backgroundColor">Background Colour:</label>
+                <input type="color" name="backgroundColor" id="backgroundColor" value="#000000">
+            </div>
+            <div class="inputs">
+                <label for="lineColor">Line Colour:</label>
+                <input type="color" name="lineColor" id="lineColor" value="#3a9288">
+            </div>
+            <div class="inputs">
+                <label for="lineWidth">Line Width:</label>
+                <input type="number" name="lineWidth" id="lineWidth" inputmode="numeric" min="1" max="100" step="1"
+                    value="2">
+            </div>
+            <div class="inputs">
+                <label for="centerRotations">Amount of Rotations:</label>
+                <input type="number" name="centerRotations" id="centerRotations" inputmode="numeric" min="1" max="100"
+                    step="1" value="7">
+            </div>
             <div id="centerSelection"></div>
         </div>
 
